@@ -22,7 +22,7 @@ interface SessionResponse {
   };
 }
 
-const API_BASE_URL = 'https://presenzapi.com/v1';
+const API_BASE_URL = 'https://usepresenz-api.com/v1';
 
 // Optional: central Axios instance (recommended)
 const api = axios.create({

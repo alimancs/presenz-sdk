@@ -5,7 +5,7 @@ import type { PresenzCallbacks } from '../types';  // assuming you have a types.
 // Trusted origin — MUST match your widget's deployed domain exactly
 // In production: 'https://verifypresenz.com'
 // For local development/testing: you can temporarily allow 'http://localhost:5173' etc.
-const TRUSTED_ORIGIN = 'https://verifypresenz.com';
+const TRUSTED_ORIGIN = 'https://presenz.netlify.com';
 
 // You can make this configurable later via environment variable or SDK init
 // const TRUSTED_ORIGIN = import.meta.env.VITE_PRESENZ_WIDGET_ORIGIN || 'https://verifypresenz.com';
