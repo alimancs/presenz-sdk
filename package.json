@@ -1,0 +1,32 @@
+{
+  "name": "presenz-sdk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alimancs/presenz-sdk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/alimancs/presenz-sdk/issues"
+  },
+  "homepage": "https://github.com/alimancs/presenz-sdk#readme",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^12.3.0",
+    "@types/react": "^19.2.8",
+    "rollup": "^4.55.1",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  }
+}
