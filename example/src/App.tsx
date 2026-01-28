@@ -1,5 +1,4 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import presenzLogo from './assets/presenz.png'
 import { PresenzButton } from 'presenz-sdk'
 import './App.css'
 
@@ -11,28 +10,23 @@ function App() {
   const callBacks = {
     onSuccess: (result: { verified: boolean; sessionId: string; score: number }) => {console.log(result)},
     onError: (error: { message: string; code?: string }) => {console.error(error.message);console.log(error.code)},
-    onClose: () => { alert("Verification closed")},
+    onClose: () => { alert("Verification cancelled")},
     onProgress: (progress: { percent: number; message?: string }) => {console.log(progress)}
   }
 
   return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+        <a href="https://presenz.netlify.com/doc" target="_blank">
+          <img src={presenzLogo} className="logo" alt="Vite logo" />
         </a>
       </div>
-      <h1>Vite + React + presenz</h1>
+      <h1>Presenz SDK Demo</h1>
       <div className="card">
         <PresenzButton 
         config={config} 
-        callbacks={callBacks}
-        >
-          Presenz Verify Button
-        </PresenzButton>
+        callbacks={callBacks} 
+        />
         <p>
           Edit <code>src/App.tsx</code>
         </p>

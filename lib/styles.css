@@ -43,6 +43,8 @@
   align-items: center;
   justify-content: center;
   z-index: 9999;
+  top:0px;
+  left:0px;
 }
 
 .presenz-modal-content {
@@ -65,16 +67,19 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: #666;
+  color: rgba(255, 255, 255, 0.748);
   z-index: 10;
 }
 
 .presenz-iframe-wrapper {
   width: 100%;
   height: 100%;
+  position: fixed;
+  top:0px;
+  left:0px;
 }
 
-.presenz-iframe-wrapper iframe {
+.presenz-iframe-wrappe {
   width: 100%;
   height: 100%;
   border: none;
@@ -85,3 +90,50 @@
   text-align: center;
   color: #d32f2f;
 }
+
+/* Add these styles to your existing presenzButton.css file */
+
+@keyframes dotPulse {
+  0%, 60%, 100% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  30% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+
+/* For inline mode as well */
+.presenz-loader-container {
+  position: relative;
+  min-height: 300px;
+}
+
+.presenz-dot-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.presenz-dot-loader .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1E3E62 0%, #0B192C 100%);
+  opacity: 0.8;
+}
+
+.presenz-dot-loader .dot:nth-child(1) { animation: dotPulse 1.5s ease-in-out 0s infinite; }
+.presenz-dot-loader .dot:nth-child(2) { animation: dotPulse 1.5s ease-in-out 0.1s infinite; }
+.presenz-dot-loader .dot:nth-child(3) { animation: dotPulse 1.5s ease-in-out 0.2s infinite; }
+.presenz-dot-loader .dot:nth-child(4) { animation: dotPulse 1.5s ease-in-out 0.3s infinite; }
+.presenz-dot-loader .dot:nth-child(5) { animation: dotPulse 1.5s ease-in-out 0.4s infinite; }
